@@ -6,7 +6,7 @@ namespace ArchiAPI.Services
     {
         public Repository CreateDbContext(string[] args)
         {
-            return new Repository(new DbContextOptionsBuilder<Repository>().UseSqlServer(args[0]).Options);
+            return new Repository(new DbContextOptionsBuilder<Repository>().UseSqlServer(System.IO.File.ReadAllText("C:\\jwt.txt")).Options);
         }
     }
 }
