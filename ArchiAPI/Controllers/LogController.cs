@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using ArchiAPI.Services;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 namespace ArchiAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public sealed class LogController : ControllerBase
     {
         private readonly ILogger _logger;

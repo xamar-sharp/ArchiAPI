@@ -15,7 +15,7 @@ namespace ArchiAPI.Controllers
             _pathProvider = provider;
         }
         [HttpGet]
-        public IActionResult LoadFile([FromHeader]string targetPath)
+        public IActionResult LoadFile([FromQuery]string targetPath)
         {
             var data = _pathProvider.Read(targetPath);
             return File(data, "application/octate-stream");
