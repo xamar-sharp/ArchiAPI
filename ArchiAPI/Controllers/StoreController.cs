@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using ArchiAPI.Queries;
 using System;
 using ArchiAPI.Services;
+using System.Linq;
 namespace ArchiAPI.Controllers
 {
     [Route("[controller]")]

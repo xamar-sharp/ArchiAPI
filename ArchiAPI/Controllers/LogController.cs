@@ -15,7 +15,7 @@ namespace ArchiAPI.Controllers
         {
             _logger = wrapper.Unwrap();
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult Post([FromHeader]string log)
         {
             _logger.LogInformation(log);
